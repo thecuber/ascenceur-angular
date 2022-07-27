@@ -1,0 +1,24 @@
+<div *ngIf="!hasPlayer()" class="card-container" [ngStyle]="{'--borderColor':cardColor}">
+    <div style="display: flex; align-items: flex-start">
+        <span>Ajouter un joueur</span>
+    </div>
+    <div style="display: flex; align-items: center; ">
+        <span><i class="fa-solid fa-plus-large fa-2xl"></i> </span>
+    </div>
+    <div style="display: flex; align-items: flex-end">
+
+    </div>
+</div>
+<div *ngIf="hasPlayer()" class="card-container" [ngStyle]="{'--borderColor':cardColor}">
+    <div style="display: flex; align-items: flex-start">
+        <span>{{player.name}}</span>
+    </div>
+    <div style="display: flex; align-items: center; ">
+        <h2 class="test">
+            {{player.score}}
+        </h2>
+    </div>
+    <div style="display: flex; align-items: flex-end">
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.card-container {
+    border: solid;
+    border-color: var(--borderColor);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+h2,
+span {
+    font-family: Rockwell;
+}
