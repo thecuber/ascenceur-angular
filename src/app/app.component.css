@@ -1,0 +1,13 @@
+.mainDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.cards{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}

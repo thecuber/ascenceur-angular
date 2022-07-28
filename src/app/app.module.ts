@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
-import { NamedialogComponent } from './namedialog/namedialog.component';
+import { AddCardComponent } from './addcard/addcard.component';
+import { PlayerCardComponent } from './player-card/player-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    NamedialogComponent
+    AddCardComponent,
+    PlayerCardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

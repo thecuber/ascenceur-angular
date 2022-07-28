@@ -1,6 +1,13 @@
-<div>
-    <app-card *ngFor="let player of players" [player]="player">
-
-    </app-card>
-    <app-card (click)="addPlayer()"></app-card>
+<div class="mainDiv">
+    <div>
+        1
+    </div>
+    <div class="cards">
+        <app-player-card *ngFor="let player of players" [player]="player" [gameState]="state">
+        </app-player-card>
+        <app-addcard (onClicked)="addPlayer()"></app-addcard>
+    </div>
+    <div>
+        3
+    </div>
 </div>

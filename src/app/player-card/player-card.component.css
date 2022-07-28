@@ -1,0 +1,12 @@
+input{
+    border: none;
+    background-color: white;
+    font: inherit;
+    text-align: center;
+    border-radius: 10px;
+}
+
+input:focus{
+    outline: none;
+    background-color: yellow;
+}

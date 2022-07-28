@@ -1,0 +1,25 @@
+<app-card (animationMade)="onCardClick()">
+    <ng-template #headerTemplate>
+        <input #nameInput [(ngModel)]="player.name" style="display: flex; justify-content: center;" maxlength="16">
+    </ng-template>
+    <ng-template #midTemplate>
+        <h2 style="display: flex; justify-content: center;">
+            {{player.score}}
+        </h2>
+    </ng-template>
+    <ng-template #footerTemplate>
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+            <span>
+                Current round
+            </span>
+            <div style="display: flex; justify-content: space-between;">
+                <span>
+                    P
+                </span>
+                <span>
+                    R
+                </span>
+            </div>
+        </div>
+    </ng-template>
+</app-card>

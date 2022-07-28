@@ -1,24 +1,11 @@
-<div *ngIf="!hasPlayer()" class="card-container" [ngStyle]="{'--borderColor':cardColor}">
-    <div style="display: flex; align-items: flex-start">
-        <span>Ajouter un joueur</span>
+<div class="card-container" (click)="animationIndex = 1">
+    <div class="flip-card-inner" [@rotate]="states[animationIndex]" (@rotate.done)="eventEnd($event)">
+      <div class="flip-card-front" [ngStyle]="{'--borderColor':cardColor}">
+        <ng-container class="Theader" [ngTemplateOutlet]="headerTemplate"></ng-container>
+        <ng-container class="Tbody" [ngTemplateOutlet]="midTemplate"></ng-container>
+        <ng-container class="Tfooter" [ngTemplateOutlet]="footerTemplate"></ng-container>
+      </div>
+      <div class="flip-card-back">
+      </div>
     </div>
-    <div style="display: flex; align-items: center; ">
-        <span><i class="fa-solid fa-plus-large fa-2xl"></i> </span>
-    </div>
-    <div style="display: flex; align-items: flex-end">
-
-    </div>
-</div>
-<div *ngIf="hasPlayer()" class="card-container" [ngStyle]="{'--borderColor':cardColor}">
-    <div style="display: flex; align-items: flex-start">
-        <span>{{player.name}}</span>
-    </div>
-    <div style="display: flex; align-items: center; ">
-        <h2 class="test">
-            {{player.score}}
-        </h2>
-    </div>
-    <div style="display: flex; align-items: flex-end">
-
-    </div>
-</div>
+  </div>
