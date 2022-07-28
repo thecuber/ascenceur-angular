@@ -7,7 +7,7 @@
         </app-player-card>
         <app-addcard (onClicked)="addPlayer()"></app-addcard>
     </div>
-    <div>
-        3
+    <div style="margin-bottom: 10px">
+        <button [disabled]="players.length == 0" (click)="action()">{{state}}</button>
     </div>
 </div>

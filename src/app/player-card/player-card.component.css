@@ -4,6 +4,7 @@ input{
     font: inherit;
     text-align: center;
     border-radius: 10px;
+    min-width: 0;
 }
 
 input:focus{

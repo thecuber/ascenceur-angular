@@ -1,6 +1,6 @@
 <app-card (animationMade)="onCardClick()">
     <ng-template #headerTemplate>
-        <input #nameInput [(ngModel)]="player.name" style="display: flex; justify-content: center;" maxlength="16">
+        <input #nameInput [(ngModel)]="player.name" [readonly]="!isWaiting()" style="display: flex; justify-content: center;" maxlength="16">
     </ng-template>
     <ng-template #midTemplate>
         <h2 style="display: flex; justify-content: center;">
@@ -13,12 +13,10 @@
                 Current round
             </span>
             <div style="display: flex; justify-content: space-between;">
-                <span>
-                    P
-                </span>
-                <span>
-                    R
-                </span>
+                <input #predictInput *ngIf="player.currentRound" [(ngModel)]="player.currentRound.prediction"
+                    style="display: flex; justify-content: center;" maxlength="2" [readonly]="!isPredicting()">
+                <input #achievedInput *ngIf="player.currentRound" [(ngModel)]="player.currentRound.output"
+                    style="display: flex; justify-content: center;" maxlength="2" [readonly]="!isAchieving()">
             </div>
         </div>
     </ng-template>

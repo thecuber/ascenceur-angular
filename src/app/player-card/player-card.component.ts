@@ -15,7 +15,11 @@ export class PlayerCardComponent implements OnInit {
   gameState !: State;
 
   @ViewChild('nameInput')
-  nameInput !: ElementRef;  
+  nameInput !: ElementRef;
+  @ViewChild('predictInput')
+  predictInput !: ElementRef;
+  @ViewChild('achievedInput')
+  achievedInput !: ElementRef;  
 
   constructor() { }
 
@@ -23,12 +27,29 @@ export class PlayerCardComponent implements OnInit {
   }
 
   onCardClick(){
-    /*switch(this.gameState){
+    switch(this.gameState){
       case State.WAITING:   
         this.nameInput.nativeElement.focus();
       break;
+      case State.PREDICTING:   
+        this.predictInput.nativeElement.focus();
+      break;
+      case State.ROUND_END:   
+        this.achievedInput.nativeElement.focus();
+      break;
+    }
+  }
 
-    }*/
+  isWaiting(){
+    return this.gameState == State.WAITING;
+  }
+
+  isPredicting(){
+    return this.gameState == State.PREDICTING;
+  }
+
+  isAchieving(){
+    return this.gameState == State.ROUND_END;
   }
 
 }
